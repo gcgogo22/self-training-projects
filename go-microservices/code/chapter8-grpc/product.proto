@@ -1,0 +1,19 @@
+syntax = "proto3"
+
+package product;
+
+option go_package = "productservice/productpb";
+
+message Product {
+	int32 id = 1;
+	string name = 2;
+	double usdPerUnit = 3;
+	string unit = 4;
+}
+
+// Service type - define a gRPC service
+// rpc is a procedure which defines that we will send data as request and get data back as response.
+
+service Product {
+	rpc GetProduct (Request) return (Response);
+}

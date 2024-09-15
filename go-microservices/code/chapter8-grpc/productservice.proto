@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package productService; 
+
+import "product.proto"; 
+
+option go_package = "productservice/productpb"; 
+
+message GetProductRequest {
+    int32 productId = 1;
+}
+
+message GetProductReply {
+    product.Product.product = 1;
+}
+
+service Product {
+    rpc GetProduct(GetProductRequest) returns (GetProductReply) {}
+}
+
+// Then need to install the additional tool that allows us to generate the source code. 
+
+/*
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+
+protoc -I=. --go_out=. --go-grpc_out=. ./product.proto ./productservice.proto
+*/
+
