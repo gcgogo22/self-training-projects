@@ -1,0 +1,1 @@
+https://github.com/daishisystems/go-secure-coding-owasp/tree/main/08/cryptographic-practices
