@@ -1,3 +1,6 @@
 [submodule "building-microservices-youtube"]
 	path = building-microservices-youtube
 	url = https://github.com/nicholasjackson/building-microservices-youtube.git
+[submodule "go-microservice-youtube/building-microservices-youtube/building-microservices-youtube"]
+	path = go-microservice-youtube/building-microservices-youtube/building-microservices-youtube
+	url = https://github.com/nicholasjackson/building-microservices-youtube.git
